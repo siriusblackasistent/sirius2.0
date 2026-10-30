@@ -1,0 +1,39 @@
+{
+  "house": "30",
+  "lights": {
+    "kitchen": {
+      "protocol": "tuya",
+      "device_id": "",
+      "ip": "",
+      "local_key": "",
+      "version": 3.3,
+      "dps": "2"
+    },
+    "chandelier": {
+      "protocol": "tuya",
+      "device_id": "",
+      "ip": "",
+      "local_key": "",
+      "version": 3.3,
+      "dps": "1"
+    },
+    "cottage": {
+      "protocol": "tuya",
+      "device_id": "",
+      "ip": "",
+      "local_key": "",
+      "version": 3.3,
+      "dps": "1"
+    },
+    "outdoor": {
+      "protocol": "sonoff",
+      "device_id": "",
+      "ip": ""
+    },
+    "bath": {
+      "protocol": "sonoff",
+      "device_id": "",
+      "ip": ""
+    }
+  }
+}

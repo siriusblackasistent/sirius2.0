@@ -1,0 +1,14 @@
+{
+  "house": "0",
+  "lights": {
+    "bra": {
+      "protocol": "tuya",
+      "device_id": "",
+      "cid": "",
+      "ip": "",
+      "local_key": "",
+      "version": 3.3,
+      "dps": "1"
+    }
+  }
+}

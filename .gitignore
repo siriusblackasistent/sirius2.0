@@ -1,0 +1,31 @@
+secrets.local.json
+server.local.json
+options/
+options*.json
+*token*.json
+*config.json
+*.log
+guest_log.txt
+__pycache__/
+*.pyc
+.venv/
+
+telebot.log
+
+devices/*.local.json
+status/
+
+# Особисті налаштування; порожній шаблон — core без розширення.
+/core.py
+data/
+.env
+.env.*
+!.env.example
+
+# Окрема підготовлена копія для публікації; не включати у робочу папку Git.
+*.vsix
+
+# Publish only this blank camera example.
+!options/
+options/*
+!options/hikvision.example.json

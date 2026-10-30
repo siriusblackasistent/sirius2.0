@@ -1,0 +1,27 @@
+[Unit]
+Description=Sirius 2.0 Telegram assistant bot
+Wants=network-online.target sirius2.0-server.service
+After=network-online.target sirius2.0-server.service
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=sirius
+Group=sirius
+WorkingDirectory=/opt/sirius2.0
+Environment=PYTHONUNBUFFERED=1
+Environment=TZ=Europe/Kyiv
+UMask=0077
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+StandardOutput=journal
+StandardError=journal
+ExecCondition=/usr/bin/python3 /opt/sirius2.0/service_check.py token
+ExecStartPre=/usr/bin/python3 /opt/sirius2.0/service_check.py server
+ExecStart=/usr/bin/python3 /opt/sirius2.0/run_remote_telegrambot.py
+TimeoutStartSec=100
+
+[Install]
+WantedBy=multi-user.target

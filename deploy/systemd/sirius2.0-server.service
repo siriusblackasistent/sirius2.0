@@ -1,0 +1,24 @@
+[Unit]
+Description=Sirius 2.0 text API server
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=sirius
+Group=sirius
+WorkingDirectory=/opt/sirius2.0
+Environment=PYTHONUNBUFFERED=1
+Environment=TZ=Europe/Kyiv
+UMask=0077
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+StandardOutput=journal
+StandardError=journal
+ExecStart=/usr/bin/python3 /opt/sirius2.0/run_sirius_server.py
+
+[Install]
+WantedBy=multi-user.target

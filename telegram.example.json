@@ -1,0 +1,16 @@
+{
+  "adminChats": [],
+  "adminUsers": [],
+  "guestChats": {},
+  "registrationHomes": [
+    "30",
+    "70"
+  ],
+  "allowAddAdmins": true,
+  "menu": "помічник,люстра,кухня,вогник,баня",
+  "menuAdmin": "меню,статус,кам1",
+  "menuByHome": {
+    "30": "меню,статус,кам1",
+    "70": "70 кухня,70 столовая,70 статус"
+  }
+}

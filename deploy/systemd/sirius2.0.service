@@ -1,0 +1,23 @@
+[Unit]
+Description=Sirius guest assistant, Telegram and media
+Wants=network-online.target
+After=network-online.target
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=sirius
+Group=sirius
+WorkingDirectory=/opt/sirius2.0
+ExecStart=/opt/sirius2.0/.venv/bin/python /opt/sirius2.0/run_sirius.py
+Environment=PYTHONUNBUFFERED=1
+Environment=TZ=Europe/Kyiv
+UMask=0077
+Restart=on-failure
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

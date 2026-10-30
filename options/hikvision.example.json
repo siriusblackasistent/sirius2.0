@@ -1,0 +1,16 @@
+{
+  "cameras": {
+    "1": {
+      "name": "Камера 1",
+      "url": "http://192.0.2.10",
+      "username": "",
+      "password": "",
+      "channel": 101,
+      "verify_tls": true,
+      "allowed_homes": [
+        "0",
+        "30"
+      ]
+    }
+  }
+}
